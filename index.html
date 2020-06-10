@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tasky</title>
+    <!-- <style media="screen">
+      body {
+        color: #e8f0ff;
+        /* height: 100%; */
+        user-select: none;
+        -webkit-app-region: drag;
+        padding-top: 20px;
+        /* -webkit-user-drag: ; */
+      }
+    </style> -->
+  </head>
+  <!-- <body style="-webkit-app-region: drag;"> -->
+  <body>
+        
+    <main>
+      <div class="content show">
+        <h1>Home</h1>
+        <h2>TASKY</h2>
+        <h3>A simple task management system by catCube</h3>
+      </div>
+      <div class="content">
+        <h1>Tasks</h1>
+        <h2>Active Tasks</h2>
+        <br>
+        <br>
+        <br>
+        <h2>Closed Tasks</h2>
+      </div>
+      <div class="content">
+        <h1>Update A Task</h1>
+      </div>
+      <div class="content">
+        <h1>Settings</h1>
+        <h2>Alerts</h2>
+        <h3>Manage your alerts</h3>
+        <br>
+        <h2>Start Up Config</h2>
+        <h3>Config Tasky to run on startup</h3>
+        <br>
+        <h2>Display</h2>
+        <h3>System Tray vs Standard App</h3>
+        <br>
+        <h2>System</h2>
+        <h3>Computer Name: <span id="comp-name"></span></h3>
+        <h3>OS: <span id="os"></span></h3>
+        <h3>CPU Model: <span id="cpu-model"></span></h3>
+        <h3>Total Memory: <span id="mem-total"></span></h3>
+      </div>
+    </main>
+
+    <nav id:"nav">
+      <ul>
+        <li>
+          <p>Home</p>
+        </li>
+        <li>
+          <p>Tasks</p>
+        </li>
+        <li>
+          <p>Update A Task</p>
+        </li>
+        <li>
+          <p>Settings</p>
+        </li>
+      </ul>
+    </nav>
+
+
+
+    
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js');
+    </script>
+    <script src="js/tabs.js"></script>
+    <script src="js/sysStats.js"></script>
+  </body>
+</html>
