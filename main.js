@@ -1,5 +1,5 @@
 // Modules
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow } = require("electron");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -13,9 +13,9 @@ function createWindow() {
     minHeight: 300,
     minWidth: 300,
     webPreferences: { nodeIntegration: true },
-    backgroundColor: '#191c21',
-    frame: false,
-    titleBarStyle: 'hidden',
+    backgroundColor: "#191c21",
+    // frame: false,
+    // titleBarStyle: 'hidden',
   });
 
   // secondaryWindow = new BrowserWindow({
@@ -29,7 +29,7 @@ function createWindow() {
   // });
 
   // Load index.html into the new BrowserWindow
-  mainWindow.loadFile('index.html');
+  mainWindow.loadFile("index.html");
   // secondaryWindow.loadFile('secondary.html');
 
   // setTimeout(() => {
@@ -44,7 +44,7 @@ function createWindow() {
   // mainWindow.webContents.openDevTools();
 
   // Listen for window being closed
-  mainWindow.on('closed', () => {
+  mainWindow.on("closed", () => {
     mainWindow = null;
   });
   // secondaryWindow.on('closed', () => {
@@ -53,14 +53,14 @@ function createWindow() {
 }
 
 // Electron `app` is ready
-app.on('ready', createWindow);
+app.on("ready", createWindow);
 
 // Quit when all windows are closed - (Not macOS - Darwin)
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") app.quit();
 });
 
 // When app icon is clicked and app is running, (macOS) recreate the BrowserWindow
-app.on('activate', () => {
+app.on("activate", () => {
   if (mainWindow === null) createWindow();
 });
